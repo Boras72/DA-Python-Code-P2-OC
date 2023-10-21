@@ -1,0 +1,62 @@
+###DESCRIPTION PRODUIT
+= soup.find('h2', text='Product Description').find_next('p').text
+
+- `soup` : c'est un objet BeautifulSoup qui contient le document HTML que vous voulez analyser.
+
+- `find('h2', text='Product Description')` : cette fonction cherche dans le document HTML le premier élément `<h2>` qui a le texte 'Product Description'. 
+
+   Dans un contexte HTML, cela pourrait ressembler à ceci :
+   ```html
+   <h2>Product Description</h2>
+   ```
+   Si un tel élément est trouvé, cet élément est renvoyé, sinon `None` est renvoyé.
+
+- `find_next('p')` : cette fonction est appelée sur l'élément trouvé au point précédent. Elle cherche le prochain élément `<p>` qui suit l'élément `<h2>` dans le document HTML. 
+
+   Elle ne se limite pas à chercher immédiatement après l'élément `<h2>`, mais parcourt le document jusqu'à ce qu'elle trouve un élément `p` ou atteigne la fin du document.
+
+- `.text` : cette propriété est appelée sur l'élément `<p>` trouvé pour obtenir tout le texte à l'intérieur de cet élément. 
+
+   Par exemple, si l'élément trouvé est `<p>Voici la description du produit.</p>`, `text` renverra `'Voici la description du produit.'`.
+
+En somme, ce code est utilisé pour extraire le texte de la description du produit dans une page HTML structurée de telle manière que la description se trouve dans un élément `p` qui suit immédiatement un élément `h2` contenant le texte `'Product Description'`.
+
+
+###CATEGORIE 
+=soup.find('ul', class_='breadcrumb').find_all('li')[-1].text.strip()
+
+soup : c'est un objet BeautifulSoup. BeautifulSoup est une bibliothèque Python qui permet d'extraire des données de fichiers HTML et XML. Elle transforme un document complexe HTML en arbre de différents types d'objets Python.
+        C'est une instance de la classe BeautifulSoup. BeautifulSoup est une bibliothèque Python pour extraire des données de fichiers HTML et XML. En d'autres termes, elle analyse le code HTML. Elle transforme un document HTML complexe en arbre de différents types d'objets Python. C'est un peu comme un arbre de Noël, mais avec des objets Python à la place des boules et des guirlandes.
+
+.find('ul', class_='breadcrumb') : cette méthode permet de chercher la première balise 'ul' qui a la classe 'breadcrumb' dans le document HTML.
+                                    Cette méthode recherche la première balise <ul> avec la classe 'breadcrumb' dans le document HTML analysé. Il est courant d'utiliser la classe 'breadcrumb' pour les fils d'ariane dans les sites web. Un fil d'ariane est un type de navigation qui révèle la position de l'utilisateur dans un site web.
+
+
+Dans un contexte HTML, cela pourrait ressembler à quelque chose comme ceci :
+
+  <ul class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li>Current Product</li>
+  </ul>
+Si un tel élément est trouvé, cet élément est renvoyé, sinon `None` est renvoyé.
+
+.find_all('li') : cette méthode est appelée sur le résultat de la précédente. Elle trouve tous les éléments 'li' qui sont des enfants de l'élément 'ul' trouvé précédemment et les retourne sous forme de liste. Dans l'exemple HTML ci-dessus, cela renverrait une liste de trois éléments 'li'.
+Cette méthode trouve toutes les balises  à l'intérieur de la balise trouvée précédemment. Chaque élément représente généralement un élément différent dans le chemin du fil d'Ariane.
+
+[-1] : cette syntaxe renvoie le dernier élément de la liste. Si la liste des éléments 'li' est vide, cela donnera une erreur. Dans notre exemple, cela renverrait l'élément 'li' qui contient le texte 'Current Product'.
+    Cette partie du code prend le dernier élément de la liste des éléments dans un fil d'ariane, cet élément représente généralement la page courante sur laquelle se trouve l'utilisateur.
+
+
+
+.text : Enfin, cette propriété extrait tout le texte à l'intérieur du dernier élément 'li'. Dans notre exemple, cela donnerait 'Current Product'.
+Cette propriété est utilisée pour extraire le texte de l'élément 'li'. En d'autres termes, il extrait le nom de la page actuelle à partir du fil d'ariane
+
+.strip : Cette méthode est utilisée pour supprimer les espaces de début et de fin du texte extrait.
+
+
+Donc en somme, ce code Python est utilisé pour extraire le texte du dernier élément 'li' dans une balise 'ul' avec la classe 'breadcrumb'. 
+Dans le contexte d'une page web, cela peut souvent signifier l'extraction de la catégorie actuelle ou du nom de la page actuelle dans un fil d'Ariane.
+Par conséquent, ce code est souvent utilisé pour obtenir le nom de la page actuelle à partir du fil d'ariane sur une page web. Le résultat est affecté à la variable catégorie
+
+Dans le contexte des sites web, un fil d'Ariane est une construction syntaxique qui facilite la navigation à l'intérieur d'un site web permettant à l'utilisateur de comprendre où il se trouve dans la structure du site en lui montrant le chemin depuis la page d'accueil jusqu'à la page actuelle
