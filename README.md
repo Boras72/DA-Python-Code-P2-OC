@@ -1,4 +1,4 @@
-# Code-Python-P2-OC
+# Projet-P2-Scraping-OC
 
 L'objectif de ce projet était de créer une application exécutable à la demande qui récupère les prix des livres au moment de son exécution. 
 
