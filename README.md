@@ -16,4 +16,3 @@ J'ai testé le système et il fonctionne correctement.
 
 Vous trouverez dans ce Repo que le code Python sans les outputs (fichiers CSV ou images ) générés.
 
-![image](https://github.com/Boras72/Code-Python-P2-OC/assets/122768386/84096b39-4b33-40e0-8f9d-b1bd0ddcd36d)
