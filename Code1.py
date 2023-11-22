@@ -1,3 +1,4 @@
+# CODE 1
 import requests
 from bs4 import BeautifulSoup
 url_livre="http://books.toscrape.com/catalogue/how-to-stop-worrying-and-start-living_431/index.html"
