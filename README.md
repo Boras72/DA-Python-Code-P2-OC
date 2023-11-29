@@ -35,30 +35,31 @@ Avant de commencer à utiliser ce projet, vous devez avoir installé Python sur 
 Il est recommandé d'utiliser un environnement virtuel pour exécuter ce projet afin de gérer les dépendances de manière isolée. Pour configurer et activer un environnement virtuel, suivez ces étapes :
 
 ### Création de l'environnement virtuel
-
 Ouvrez un terminal et exécutez la commande suivante à la racine de votre projet :
 ```bash
-python3 -m venv 'nom_de_votre_environnement'      (cela créera un nouveau dossier nom_de_votre_environnement contenant l'environnement virtuel)
+python3 -m venv 'nom_de_votre_environnement'      
+(cela créera un nouveau dossier nom_de_votre_environnement contenant l'environnement virtuel)
 ```
-### Pour activer l'environnement virtuel :    (utilisez la commande appropriée à votre système d'exploitation) 
-
-Windows : nom_de_votre_environnement\Scripts\activate
-MacOS et Linux : source nom_de_votre_environnement/bin/activate
-
+### Pour activer l'environnement virtuel :   
+Windows : 
+```nom_de_votre_environnement\Scripts\activate```
+MacOS et Linux : 
+```source nom_de_votre_environnement/bin/activate```
 Une fois l'environnement virtuel activé, votre invite de commande se positionnera dans le nouvel environnement virtuel (*).
 
 ### Installation des dépendances
-
 Installez les dépendances nécessaires en exécutant :
 ```bash
 pip install -r requirements.txt
-(Le fichier requirements.txt présent à la racine du projet contient les bibliothèques du projet "Requests" et "BeautifulSoup4")
+(Le fichier requirements.txt contient les bibliothèques du projet "Requests" et "BeautifulSoup4")
 ```
+### Exécution du code
 Pour exécuter le script d'extraction, assurez-vous que l'environnement virtuel est activé, puis exécutez la commande suivante dans votre terminal :
 ```bash
 python3 main.py
 (Désactiver l'environnement virtuel en exécutant : "deactivate")
 ```
+
 ## Contribution
 Pour contribuer au projet, veuillez 'forker' le dépôt, créer une branche de fonctionnalités, puis soumettre une pull request pour examen.
 
