@@ -41,10 +41,10 @@ python3 -m venv 'nom_de_votre_environnement'
 (cela créera un nouveau dossier nom_de_votre_environnement contenant l'environnement virtuel )
 ```
 ### Pour activer l'environnement virtuel :   
-####Windows : 
+Windows : 
 ```nom_de_votre_environnement\Scripts\activate```
 
-####MacOS et Linux : 
+MacOS et Linux : 
 ```source nom_de_votre_environnement/bin/activate```
 
 Une fois l'environnement virtuel activé, votre invite de commande se positionnera dans le nouvel environnement virtuel (*).
@@ -59,7 +59,7 @@ pip install -r requirements.txt
 Pour exécuter le script d'extraction, assurez-vous que l'environnement virtuel est activé, puis exécutez la commande suivante dans votre terminal :
 ```python
 python3 main.py
-(Décastiver l'environnement virtuel en exécutant : "deactivate")
+( Désactiver l'environnement virtuel en exécutant : "deactivate")
 ```
 
 ## Contribution
