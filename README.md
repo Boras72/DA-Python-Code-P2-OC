@@ -38,13 +38,15 @@ Il est recommandé d'utiliser un environnement virtuel pour exécuter ce projet 
 Ouvrez un terminal et exécutez la commande suivante à la racine de votre projet :
 ```bash
 python3 -m venv 'nom_de_votre_environnement'      
-(cela créera un nouveau dossier nom_de_votre_environnement contenant l'environnement virtuel)
+(cela créera un nouveau dossier nom_de_votre_environnement contenant l'environnement virtuel )
 ```
 ### Pour activer l'environnement virtuel :   
-Windows : 
+####Windows : 
 ```nom_de_votre_environnement\Scripts\activate```
-MacOS et Linux : 
+
+####MacOS et Linux : 
 ```source nom_de_votre_environnement/bin/activate```
+
 Une fois l'environnement virtuel activé, votre invite de commande se positionnera dans le nouvel environnement virtuel (*).
 
 ### Installation des dépendances
@@ -55,9 +57,9 @@ pip install -r requirements.txt
 ```
 ### Exécution du code
 Pour exécuter le script d'extraction, assurez-vous que l'environnement virtuel est activé, puis exécutez la commande suivante dans votre terminal :
-```bash
+```python
 python3 main.py
-(Désactiver l'environnement virtuel en exécutant : "deactivate")
+(Décastiver l'environnement virtuel en exécutant : "deactivate")
 ```
 
 ## Contribution
