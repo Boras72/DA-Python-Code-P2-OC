@@ -38,7 +38,6 @@ Il est recommandé d'utiliser un environnement virtuel pour exécuter ce projet 
 Ouvrez un terminal et exécutez la commande suivante à la racine de votre projet :
 ```bash
 python3 -m venv 'nom_de_votre_environnement'      
-(cela créera un nouveau dossier nom_de_votre_environnement contenant l'environnement virtuel )
 ```
 ### Pour activer l'environnement virtuel :   
 Windows : 
@@ -47,19 +46,17 @@ Windows :
 MacOS et Linux : 
 ```source nom_de_votre_environnement/bin/activate```
 
-Une fois l'environnement virtuel activé, votre invite de commande se positionnera dans le nouvel environnement virtuel (*).
+Une fois l'environnement virtuel activé, votre invite de commande se positionnera dans le nouvel environnement virtuel.
 
 ### Installation des dépendances
 Installez les dépendances nécessaires en exécutant :
 ```bash
 pip install -r requirements.txt
-(Le fichier requirements.txt contient les bibliothèques du projet "Requests" et "BeautifulSoup4")
 ```
 ### Exécution du code
-Pour exécuter le script d'extraction, assurez-vous que l'environnement virtuel est activé, puis exécutez la commande suivante dans votre terminal :
+Pour exécuter le script d'extraction, assurez-vous que l'environnement virtuel est activé, puis exécutez la commande suivante dans votre Terminal :
 ```python
 python3 main.py
-( Désactiver l'environnement virtuel en exécutant : "deactivate")
 ```
 
 ## Contribution

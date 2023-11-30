@@ -1,1 +1,3 @@
-/ignorer les fichiers suivants :
+P2-venv/
+csv/
+images/
