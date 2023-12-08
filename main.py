@@ -39,9 +39,7 @@ def extraire_infos_livre(url):
         'description': product_description,
         'categorie': category,
         'evaluation': review_rating,
-        'image_url': image_url}
-    
-# Ecriture des informations extraites sur 1 livre :        
+        'image_url': image_url}   
 
 
 #Extraction des liens des livres de la catégorie "Mystery":
@@ -59,7 +57,6 @@ def extraire_liens_categorie(url_categorie):
     
     return [livre.find('a')['href'].replace('../../../', 'http://books.toscrape.com/catalogue/') for livre in livres]
     
-
 
 # Extraction des images de tous les livres :       
 def telecharger_image(url_image, nom_fichier):
@@ -79,7 +76,7 @@ def extraire_donnees_categorie(url_categorie, nom_categorie):
             ecrire.writerow(donnees)
             url_image = donnees['image_url']
             nom_image = url_image.split('/')[-1]
-            telecharger_image(url_image, 'images\\' + nom_image)  
+            telecharger_image(url_image, f'images/{nom_categorie}/{nom_image}')  
 
 
 # Extraction des liens des livres de toutes les catégories :
@@ -89,7 +86,7 @@ def extraire_liens_toutes_categories():
     soup = BeautifulSoup(reponse.text, 'html.parser')
     categories = soup.find('div', class_='side_categories').find_all('a')
     liens_categories = ['http://books.toscrape.com/' + categorie['href'] for categorie in categories[1:]]  # Nous excluons le premier élément car il représente "All books"
-    
+   
     return liens_categories
 
 
@@ -98,7 +95,10 @@ def extraire_et_ecrire_infos_toutes_categories():
     liens_categories = extraire_liens_toutes_categories()
     for lien_categorie in liens_categories:
         nom_categorie = lien_categorie.split('/')[-2]
+        if not os.path.exists(f"images/{nom_categorie}"):
+            os.makedirs(f"images/{nom_categorie}")
         extraire_donnees_categorie(lien_categorie, nom_categorie)
+
 
 # Exécution du code de la fonction
 extraire_et_ecrire_infos_toutes_categories()
